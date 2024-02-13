@@ -1,0 +1,21 @@
+if (MSVC)
+    add_compile_options(
+        /W4
+        /WX
+    )
+else()
+    add_compile_options(
+        -Wall
+        -Walloc-zero
+        -Wcast-qual
+        -Wconversion
+        -Wduplicated-branches
+        -Wduplicated-cond
+        -Werror
+        -Wextra
+        -Wfloat-equal
+        -Winit-self
+        -Wlogical-op
+        -Wwrite-strings
+    )
+endif()
