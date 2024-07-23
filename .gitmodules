@@ -1,3 +1,6 @@
 [submodule "external/vcpkg"]
 	path = external/vcpkg
 	url = ../../microsoft/vcpkg.git
+[submodule "external/nanopb"]
+	path = external/nanopb
+	url = ../nanopb.git
