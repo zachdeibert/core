@@ -4,6 +4,16 @@ repos:
     hooks:
       - id: clang-format
         types_or: [c++, c, c#, cuda, java, javascript, objective-c, proto, textproto]
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.9.0
+    hooks:
+      - id: eslint
+        additional_dependencies:
+          - eslint@9.9.0
+          - typescript-eslint@8.1.0
+          - typescript@5.5.4
+        files: \.[jt]s$
+        types: [file]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
@@ -28,6 +38,7 @@ repos:
       - id: fix-byte-order-marker
       - id: pretty-format-json
         args: [--indent=4]
+        exclude: ^package-lock\.json$
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/psf/black
